@@ -1,6 +1,17 @@
-# yipao
+# 基于Vue-cli的PC端SPA实践（Yipao）
 
-> A Vue.js project
+> A Simple Vue2.0 project （IE9+）
+> Still underConstruction
+> 基于Vue-cli的PC端SPA
+> Based on Vue-cli for PC SPA（仿·益跑网）
+
+## Demo
+
+https://laclys.github.io/yipao/dist/index.html
+
+## Stack
+
+Vue2.0+Vue-router2+Webpack2+ES6+Sass+Vue-lazyload+Vue-awesome-swiper
 
 ## Build Setup
 
@@ -18,4 +29,51 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Directory structure
+```
+├─src
+│  │  App.vue
+│  │  main.js
+│  │
+│  ├─assets
+│  │      index_fixed.png
+│  │      logo.png
+│  │
+│  └─components
+│      ├─column
+│      │      column.vue
+│      │
+│      ├─enroll
+│      │      enroll.vue
+│      │
+│      ├─equip
+│      │      equip.vue
+│      │
+│      ├─footer
+│      │      footer.vue
+│      │
+│      └─index
+│              index.vue
+│
+└─static //(reset.css and image files)
+└─index.html
+```
+## Demo images
+
+![](./demo_pics/demo01.jpg)
+
+![](./demo_pics/demo02.jpg)
+
+![](./demo_pics/demo03.jpg)
+
+![](./demo_pics/demo04.jpg)
+
+![](./demo_pics/demo05.jpg)
+
+## TODO
+
+> 进一步组件化
+
+> 性能优化
+
+## Thanks

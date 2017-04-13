@@ -8,7 +8,7 @@
                     <p ref="aP"
                        class="show"></p>
                     <a :href="v.href">
-                        <img :src="v.imgSrc"
+                        <img v-lazy="v.imgSrc"
                              alt="">
                     </a>
                     <em ref="aEm"
@@ -95,7 +95,7 @@
                 </li>
             </ul>
         </div>
-        <div class="content-fixed">
+        <div class="content-fixed" v-show="toTopFlag">
             <a href="javascript:;"
                title="回到顶部"
                @click="toTop"></a>
@@ -106,7 +106,8 @@
 export default {
     data() {
         return {
-            n: 0,
+            "n": 0,
+            "toTopFlag": false,
             "indexData": {
                 "errno": 0,
                 "side2ImgSrc": ["./static/index/index_apply.png", "./static/index/index_date.png", "./static/index/index_store.png", "./static/index/index_shoe.png", "./static/index/index_box.png"
@@ -347,9 +348,13 @@ export default {
                     this.$refs.aP[this.n].style.opacity = '0';
                 }
             }
+        },
+        handleScroll() {
+            this.toTopFlag =window.scrollY > 0;
         }
     },
     mounted: function () {
+        // 手风琴轮播图
         for (var i = 1; i < this.$refs.aImg.length; i++) {
             this.$refs.aImg[i].style.left = 1200 - (this.$refs.aImg.length - i) * 96 + 'px';
         }
@@ -361,6 +366,8 @@ export default {
             }
             _this.go();
         }, 3000);
+        // 监听滚动事件
+        window.addEventListener('scroll', this.handleScroll);
     }
 }
 </script>
