@@ -191,7 +191,7 @@ export default {
                     },
                     {
                         "href": "javascript:;",
-                        "src": "./static/index/index_side3_p1.png",
+                        "src": "./static/index/index_side3.jpg",
                         "article_bottom": [
                             {
                                 "href": "javascript:;",
